@@ -18,6 +18,8 @@ var copyText = document.getElementsByClassName('note-codable')[0];
 copyText.select();
 document.execCommand("copy");
 alert("복사 완료!");
+
+clearArea();
 } // copy
 
 
@@ -47,12 +49,14 @@ function changeColor(input) {
 function changeWidth(input) {
     result = input;
 
-    firstindex = result.indexOf('sheet-rolltemplate-coc-1') + 137;
+    firstindex = result.indexOf('sheet-rolltemplate-coc-1');
     endindex = result.indexOf('border: 1px solid black; color: black;"><');
-    width = result.substring(firstindex, endindex);
+    width = result.substring(firstindex + 137, endindex);
+
+    console.log(firstindex);
 
     // convert the width of dice roll components 
-    if(width != -1) {
+    if(firstindex != -1) {
         result = result.replaceAll(width, "100%; ")
     } // if
     
