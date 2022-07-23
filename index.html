@@ -23,42 +23,42 @@
         <a href="./howto.html" style="color:black; font-size: 25px; text-decoration: none;"> 사용 설명서 </a>
         
         
-
-        <div class = "image" style = "padding-top: 30px;">
-            <input id = "oldurl" type="text" placeholder="원본 html 속 이미지 주소"> 
-            <input id = "newurl" type="text" placeholder="바꿔치기할 새 이미지 주소">
-
-        </div>
-        <div>
-
-            <!-- textarea -->
-            <textarea class = "box" id="summernote" name="editordata"></textarea>
-            <script>$(document).ready(function() {
-                $('#summernote').summernote({
-                        width: 700,
-                        height: 420,
-                        margin: 'auto',
-                        lang: "ko-KR",
-                        toolbar: [
-                            ['codeview', ['codeview']]
-                        ],
-                    }
-                );
-            });</script>
-
-
-            <!-- submit button-->
-            <div class = "buttons">
-                <button id = "clearBtn" onclick = "clearArea()"> Clear </button>
-                
-                <button id = "copyBtn" onclick = "copy()"> Copy </button>
-                <button id = "convertImage" onclick = "imageConvert()"> Swap Image </button>
-                <button id = "convertBtn" onclick = "convert()"> Convert </button>
+        <section style = "margin: 5vh;">
+            <div class = "image" style = "padding: 20px;">
+                <input id = "oldurl" type="text" placeholder="원본 html 속 이미지 주소"> 
+                <input id = "newurl" type="text" placeholder="바꿔치기할 새 이미지 주소">
             </div>
-           
-            
-        </div>
-        
 
+            
+            <div>
+                <!-- textarea -->
+                <textarea class = "box" id="summernote" name="editordata"></textarea>
+                <script>$(document).ready(function() {
+                    $('#summernote').summernote({
+                            width: 700,
+                            height: 390,
+                            margin: 'auto',
+                            lang: "ko-KR",
+                            toolbar: [
+                                ['codeview', ['codeview']]
+                            ],
+                        }
+                    );
+                });</script>
+
+
+                <!-- submit button-->
+                <div class = "buttons">
+                    <button id = "clearBtn" onclick = "clearArea()"> Clear </button>
+                    
+                    <button id = "copyBtn" onclick = "copy()"> Copy </button>
+                    <button id = "convertImage" onclick = "imageConvert()"> Swap Image </button>
+                    <button id = "convertBtn" onclick = "convert()"> Convert </button>
+                </div>
+            
+                
+            </div>
+            
+        </section>
     </body>
 </html>
