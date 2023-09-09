@@ -49,18 +49,20 @@ function changeColor(input) {
 function changeWidth(input) {
     result = input;
 
-    firstindex = result.indexOf('sheet-rolltemplate-coc-1');
-    endindex = result.indexOf('border: 1px solid black; color: black;"><');
-    width = result.substring(firstindex + 137, endindex);
+    return result.replaceAll("<table style=\"", "<table style = width = 100%;\"");
 
-    console.log(firstindex);
+    // firstindex = result.indexOf('sheet-rolltemplate-coc-1');
+    // endindex = result.indexOf('border: 1px solid black; color: black;"><');
+    // width = result.substring(firstindex + 137, endindex);
 
-    // convert the width of dice roll components 
-    if(firstindex != -1) {
-        result = result.replaceAll(width, "100%; ")
-    } // if
+    // console.log(firstindex);
+
+    // // convert the width of dice roll components 
+    // if(firstindex != -1) {
+    //     result = result.replaceAll(width, "100%; ")
+    // } // if
     
-    return result;    
+    // return result;    
 } // changeWidth
 
 
